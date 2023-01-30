@@ -13,7 +13,7 @@ pipeline {
                 echo 'Testing...'
             }
         }
-        stage('Deploy') {
+        stage('Prod') {
             steps {
 
                 sh 'cp index.html /var/www/html/'
