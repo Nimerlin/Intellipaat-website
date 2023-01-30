@@ -5,12 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 git branch: ‘master’,url: https://github.com/Nimerlin/Intellipaat-website.git
-                echo 'Building..'
+                echo 'Building...'
             }
         }
         stage('Test') {
             steps { 
-                echo 'Testing..'
+                echo 'Testing...'
             }
         }
         stage('Deploy') {
