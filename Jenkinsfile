@@ -17,7 +17,7 @@ pipeline {
             steps {
 
                 sh 'docker build -t myproject1 .'
-                sh 'docker run -d -p 80:80 myproject1'
+                sh 'docker run -d -p 8001:80 myproject1'
                 echo 'Deploying....'
             }
         }
