@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git branch: ‘master’, url: 'https://github.com/Nimerlin/Intellipaat-website.git'
+                git branch: 'master', url: 'https://github.com/Nimerlin/Intellipaat-website.git'
                 echo 'Building..'
             }
         }
