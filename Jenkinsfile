@@ -16,8 +16,8 @@ pipeline {
         stage('Prod') {
             steps {
 
-                sh 'cp index.html /var/www/html/'
-                sh 'cp images/github3.jpg /var/www/html/images/'
+                sh 'docker build -t myproject1 .'
+                sh 'docker run -d -p 80:80 myproject1'
                 echo 'Deploying....'
             }
         }
