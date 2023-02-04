@@ -8,6 +8,7 @@ pipeline {
 
                 sh 'docker build -t nimerlin/project2 .'
                 sh 'docker tag nimerlin/project2 nimerlin/project2'
+                sh 'docker login -u "nimerlin" -p "Resume@1998" docker.io'
                 sh 'docker push nimerlin/project2'
                 echo 'Building....'
             }
