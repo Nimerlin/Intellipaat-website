@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        kubernetes {
-            label 'mypod'
-        }
-    }
+    agent any
 
     stages {
         
