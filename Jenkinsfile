@@ -20,6 +20,7 @@ pipeline {
                     sh "kubectl delete all --all"
                     sh "kubectl apply -f deployment.yaml"
                     sh "kubectl apply -f service.yaml"
-    }
-    }
+                 }
+            }
+        }
 }
