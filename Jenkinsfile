@@ -6,8 +6,8 @@ pipeline {
         stage('Build') {
             steps {
 
-                sh 'docker build -t myproject1 .'
-                sh 'docker run -d -p 8001:80 myproject1'
+                sh 'docker build -t project2 .'
+                sh 'docker tag project2 nimerlin/project2'
                 sh 'docker push nimerlin/project2'
                 echo 'Building....'
             }
