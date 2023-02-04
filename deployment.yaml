@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 
+        image: nimerlin/project2
         ports:
         - containerPort: 80
