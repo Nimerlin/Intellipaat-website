@@ -17,8 +17,6 @@ pipeline {
         steps{
                  withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s', namespace: '', serverUrl: '') {
                     // some block
-                     sh "aws eks update-kubeconfig --name demo-eks --region ap-south-1"
-                    sh "cd /home/ubuntu/"
                     sh "kubectl delete all --all"
                     sh "kubectl apply -f deployment.yaml"
                     sh "kubectl apply -f service.yaml"
