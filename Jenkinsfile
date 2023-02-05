@@ -17,9 +17,9 @@ pipeline {
         steps{
                  withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s', namespace: '', serverUrl: '') {
                     // some block
-                    sh "kubectl delete all --all"
-                    sh "kubectl apply -f deployment.yaml"
-                    sh "kubectl apply -f service.yaml"
+                    sh "sh /usr/local/bin eksctl delete all --all"
+                    sh "sh /usr/local/bin eksctl apply -f deployment.yaml"
+                    sh "sh /usr/local/bin eksctl apply -f service.yaml"
                  }
             }
         }
